@@ -171,7 +171,7 @@ img{
 }
 .order.button{
     background-color: var(--brand-color);
-    color: inherit;
+    color: var(--white-color);
     font-weight: 700;
     font-size: 16px;
     line-height: 1.87;
@@ -511,14 +511,16 @@ img{
     width: 528px;
     height: 581px;
     background-color: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 }
 .close-button{
     display: flex;
     align-items: center;
     justify-content: center;
     position: absolute;
-    left: 490px;
-    bottom: 543px;
+    right: 8px;
+    top: 8px;
     width: 30px;
     height: 30px;
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -529,27 +531,64 @@ img{
 .modal{
     padding:40px;
 }
-.form-title{
-    text-align: center;
-    margin-bottom: 12px;
-}
+
 .registration{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    color: var(--secondary-color);
+    font-size: 14px;
+    line-height: 0.58;
+    letter-spacing: 0.03em;
+}
+.inputs{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
     gap: 10px;
-
+    width: 100%;
+}
+.form-title{
+    text-align: center;
+    margin-bottom: 12px;
+    color: var(--main-color);
 }
 .form-element{
     display: flex;
     flex-direction: column;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
     width: 100%;
     gap: 4px;
+}
+.policy-form{
+    margin-bottom: 30px;
+}
+.contract{
+    color: var(--brand-color);
 }
 .form-element>input, .form-element>textarea{
 padding: 11px 12px;
 border: none;
 outline: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
+
 }
+.form-element>textarea{
+    height: 120px;
+    resize: none;
+    
+}
+.button-modul-position{
+    display: flex;
+    justify-content: center;
+}
+.button-modul{
+    width: 200px;
+    height: 50px;
+    transition: 
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.button-modul:hover, .button-modul:active, .button-modul:focus{
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+
