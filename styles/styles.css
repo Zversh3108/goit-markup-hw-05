@@ -7,8 +7,11 @@
     --secondary-bcg-color:#2F303A;
     --team-bcg-color:#F5F4FA;
     --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    --button-shadow:0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     --icon-defult-color: #AFB1B8;
     --portfolio-item-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    --input-border: 1px solid rgba(33, 33, 33, 0.2);
+    --bottom-input-border:1px solid rgba(255, 255, 255, 0.3);
 }
 
 .list,
@@ -381,7 +384,7 @@ img{
     gap: 70px;
     align-items:baseline;
 }
-.social-list-title{
+.social-list-title, .subscription-title{
     margin-bottom:20px;
     font-weight: 700;
     letter-spacing: 0.03em;
@@ -425,7 +428,7 @@ img{
 .filter-button:hover, .filter-button:focus, .filter-button:active{
    background-color: var(--brand-color);
    color: var(--white-color);
-   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+   box-shadow: var(--button-shadow);
 }
 
 /* portfolio list */
@@ -530,65 +533,114 @@ img{
 /* forms */
 .modal{
     padding:40px;
+   
 }
-
 .registration{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     color: var(--secondary-color);
-    font-size: 14px;
-    line-height: 0.58;
-    letter-spacing: 0.03em;
-}
-.inputs{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-    gap: 10px;
-    width: 100%;
+   
 }
 .form-title{
     text-align: center;
     margin-bottom: 12px;
-    color: var(--main-color);
 }
-.form-element{
+.registration, .data-inputs, .person-form{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    width: 100%;
-    gap: 4px;
 }
-.policy-form{
-    margin-bottom: 30px;
+.registration{
+    gap: 20px;
+}
+
+.data-inputs{
+    gap: 10px;
+}
+.form-control{
+    position: relative;
+}
+.input-icon{
+    position: absolute;
+    left: 18px;    
+    top: 50%;
+    transform: translateY(-50%);
+
+    
+}
+
+
+
+
+
+
+.person-form>.form-label{
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+}
+.form-input{
+    width: 100%;
+    padding: 11px 42px;
+    border: var(--input-border);
+    border-radius: 4px;
+    transition: 
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-input:hover, .form-input:focus, .form-input:active{
+    outline-color: var(--brand-color);
+    fill: var(--brand-color);
+    cursor: pointer;
+ }
+.comment-area{
+    padding: 12px 16px;
+    border: var(--input-border);
+    border-radius: 4px;
+    resize: none;
+    height: 120px;
+}
+.accepting{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:30px;
+}
+
+.policy-form>.form-label{
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 .contract{
     color: var(--brand-color);
-}
-.form-element>input, .form-element>textarea{
-padding: 11px 12px;
-border: none;
-outline: 1px solid rgba(33, 33, 33, 0.2);
-border-radius: 4px;
-
-}
-.form-element>textarea{
-    height: 120px;
-    resize: none;
-    
-}
-.button-modul-position{
-    display: flex;
-    justify-content: center;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
 }
 .button-modul{
+   width: 200px;
+   box-shadow: var();
+   box-shadow: var(--button-shadow);
+}
+.subscription{
+    display: flex;
+    justify-content: center;
+    gap:12px;
+}
+.subscription-input{
+    width: 358px;;
+    padding: 15px 16px;
+    background-color: inherit;
+    border: none;
+    outline: var(--bottom-input-border);
+    border-radius: 4px;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+}
+.subscription-button{
     width: 200px;
     height: 50px;
-    transition: 
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
-.button-modul:hover, .button-modul:active, .button-modul:focus{
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-

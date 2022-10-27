@@ -364,48 +364,64 @@
                     </li>
                 </ul>        
             </div>
+            <div class="subsription-form">
+                <h3 class= "subscription-title">Підпишіться на розсилку</h3>
+                <form name="subscription" class="subscription">
+                    <input class="subscription-input" type="email" name="email-subscription" id="email-subscription" placeholder="E-mail"> 
+                    <button class="button order subscription-button" type="submit">Підписатися
+                        <svg class="icon-subscription" width = "24px" height="24px">
+                            <use href="symbol-defs.svg#icon-send" ></use>
+                        </svg>
+                    </button>
+                </form>
+            </div>
         </div>    
     </footer>
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <h3 class="form-title">Залиште свої дані, ми вам передзвонимо</h3>
             <form name="registration" class="registration" >
-                <div class="inputs">
-                    <div class="form-element">
-                        <label for="person-name">Ім'я</label>
-                        <input type="text" name="person" id="person-name" >
-                        
+                <div class="data-inputs">
+                    <div class="person-form">
+                        <label class="form-label" for="person-name">Ім'я</label>
+                        <div class="form-control">
+                            <input class="form-input" type="text" name="person" id="person-name" > 
+                            <svg class="input-icon" width = "18px" height="18px">
+                                <use href="symbol-defs.svg#icon-person" ></use>
+                            </svg> 
+                        </div>
+                    </div> 
+                    <div class="person-form">
+                        <label class="form-label" for="phone-number">Телефон</label>                  
+                        <div class="form-control">
+                            <input class="form-input" type="tel" name="phone-number" id="phone-number" > 
+                            <svg class="input-icon" width = "18px" height="18px">
+                                <use href="symbol-defs.svg#icon-phone" ></use>
+                            </svg> 
+                        </div>   
+                    </div>     
+                    <div class="person-form">       
+                        <label class="form-label" for="mail">Пошта</label>
+                        <div class="form-control">
+                            <input class="form-input" type="email" name="mail" id="mail" > 
+                            <svg class="input-icon" width = "18px" height="18px">
+                                <use href="symbol-defs.svg#icon-email" ></use>
+                            </svg> 
+                        </div>
                     </div>
-                    <div class="form-element">
-                        <label for="tel">Телефон</label>                  
-                        <input type="tel" name="phone-number" id="tel">                 
-                    </div>
-                    <div class="form-element">
-                        <label for="mail">Пошта</label>
-                        <input type="email" name="email-adress" id="mail">
-                    </div>
-                    <div class="form-element">
-                        <label for="comment">Коментар</label>
-                        <textarea name="comment-text" id="comment" placeholder="Введіть текст"></textarea>
-                    </div>
+                    <div class="person-form">
+                        <label class="form-label" for="comment">Коментар</label>
+                        <textarea class = "comment-area" name="comment-text" id="comment" placeholder="Введіть текст"></textarea> 
+                    </div> 
                 </div>
-            
-                <div class="policy-form">
-                    <input type="checkbox" name="policy-tick" id="policy">
-                    <label for="policy">Погоджуюся з розсилкою та приймаю <a class="contract" href="#">Умови договору</a></label>
-                </div>
-                <div class="button-modul-position">
-                    <button type="submit" class="button order button-modul">Відправити</button>
-                </div>
-                
+                <div class="accepting"> 
+                    <div class="policy-form">      
+                        <input  class = "policy-checkbox" type="checkbox" name="policy-tick" id="policy">
+                        <label class="form-label" for="policy">Погоджуюся з розсилкою та приймаю <a class="contract" href="#">Умови договору</a></label>
+                    </div>   
+                        <button type="submit" class="button order button-modul">Відправити</button>   
+                </div>           
             </form>
-
-
-
-
-
-
-
             <button class="close-button" type="button" data-modal-close>
                 <svg class="icon" width = "18px" height="18px">
                     <use href="symbol-defs.svg#icon-close-button"></use>
