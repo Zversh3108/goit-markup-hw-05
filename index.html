@@ -367,7 +367,7 @@
             <div class="subsription-form">
                 <h3 class= "subscription-title">Підпишіться на розсилку</h3>
                 <form name="subscription" class="subscription">
-                    <input class="subscription-input" type="email" name="email-subscription" id="email-subscription" placeholder="E-mail"> 
+                    <input class="subscription-input" type="email" name="email-subscription" id="email-subscription" placeholder="E-mail" autocomplete="off" > 
                     <button class="button order subscription-button" type="submit">Підписатися
                         <svg class="icon-subscription" width = "24px" height="24px">
                             <use href="symbol-defs.svg#icon-send" ></use>
@@ -385,7 +385,7 @@
                     <div class="person-form">
                         <label class="form-label" for="person-name">Ім'я</label>
                         <div class="form-control">
-                            <input class="form-input" type="text" name="person" id="person-name" > 
+                            <input class="form-input" type="text" name="person" id="person-name" autocomplete="off" > 
                             <svg class="input-icon" width = "18px" height="18px">
                                 <use href="symbol-defs.svg#icon-person" ></use>
                             </svg> 
@@ -394,7 +394,7 @@
                     <div class="person-form">
                         <label class="form-label" for="phone-number">Телефон</label>                  
                         <div class="form-control">
-                            <input class="form-input" type="tel" name="phone-number" id="phone-number" > 
+                            <input class="form-input" type="tel" name="phone-number" id="phone-number" autocomplete="off" > 
                             <svg class="input-icon" width = "18px" height="18px">
                                 <use href="symbol-defs.svg#icon-phone" ></use>
                             </svg> 
@@ -403,7 +403,7 @@
                     <div class="person-form">       
                         <label class="form-label" for="mail">Пошта</label>
                         <div class="form-control">
-                            <input class="form-input" type="email" name="mail" id="mail" > 
+                            <input class="form-input" type="email" name="mail" id="mail" autocomplete="off" > 
                             <svg class="input-icon" width = "18px" height="18px">
                                 <use href="symbol-defs.svg#icon-email" ></use>
                             </svg> 
@@ -411,14 +411,16 @@
                     </div>
                     <div class="person-form">
                         <label class="form-label" for="comment">Коментар</label>
-                        <textarea class = "comment-area" name="comment-text" id="comment" placeholder="Введіть текст"></textarea> 
+                        <textarea class = "comment-area" name="comment-text" id="comment" placeholder="Введіть текст" autocomplete="off" ></textarea> 
                     </div> 
                 </div>
-                <div class="accepting"> 
-                    <div class="policy-form">      
-                        <input  class = "policy-checkbox" type="checkbox" name="policy-tick" id="policy">
-                        <label class="form-label" for="policy">Погоджуюся з розсилкою та приймаю <a class="contract" href="#">Умови договору</a></label>
-                    </div>   
+                <div class="accepting">            
+                        <label class="policy-form-label" for="policy">
+                            <input  class = "policy-checkbox" type="checkbox" name="policy-tick" id="policy">
+                            <span class="tick-icon"></span>
+                            Погоджуюся з розсилкою та приймаю   
+                            <a class="contract" href="#">Умови договору</a>
+                        </label>
                         <button type="submit" class="button order button-modul">Відправити</button>   
                 </div>           
             </form>
