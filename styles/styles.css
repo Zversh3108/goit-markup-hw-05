@@ -685,7 +685,7 @@ img{
     
 }
 .policy-checkbox:checked + .tick-icon{
-    background-image: url("./images/tick.svg");
+    background-image: url("../images/tick.svg");
     border: 2px solid var(--brand-color);
     background-origin:padding-box;
     background-repeat: no-repeat;
